@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 
+*{
+    box-sizing: border-box;
+    /* garante que o elmento ocupa no maximo o espaço definido */
+}
 body {
     margin: 0;
     padding: 0;
@@ -74,12 +78,14 @@ main section.receitas-principais h2 {
     display: flex; /*ativando flexbox */
     justify-content: space-evenly; /* espaço entre os elementos na horizontal */
 align-items: flex-start; /*todos os elementos alinhado no topo */
+flex-wrap: wrap;
 }
 
 .lista-receitas article {
     
     width:345px; /* largura do article */
     text-align: center; /*centralizando tudo no article */
+margin-bottom: 60px;
 }
 
 .lista-receitas  article .thumb {
@@ -133,7 +139,7 @@ section.banner-secundario .container p {
 }
 
 footer {
-    background-color:#FFC107;
+    background-color:#FFA000;
     color: #fff;
     font-weight: 700;
     font-size: 18px;
@@ -150,4 +156,141 @@ footer .container {
 
 footer p {
     padding: 0 15px;
+}
+
+
+/* pagina todas as receitas */
+
+main section.todas-receitas .container {
+    min-height: 600px;
+    width:1200px;
+    margin: 0 auto; /* espaçamento automatico para centralizar o container */
+   padding: 50px 0; 
+}
+    
+    main section.todas-receitas h2 {
+        color:#FFA000;
+        font-weight: bold;
+        font-size: 50px;
+        text-transform: lowercase;
+    }
+
+    /*pagina receitas */
+
+    .container-receita-interna{
+        width: 1200px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start
+    }
+
+    .container-receita-interna main {
+        width: 700px;
+    }
+
+    .container-receita-interna main img{
+        width: 100%
+    }
+
+    small.tag {
+        display: inline-block;
+        border: 1px solid #176902;
+        border-radius: 47px;
+        color:#176902;
+        padding: 5px 10px;
+        margin: 10px 0;
+    }
+
+    aside article.receita-relacionada {
+        background-color: #fff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        margin: 40px 0;
+    }
+
+    aside article.receita-relacionada .thumb {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    aside article.receita-relacionada h3{
+        padding: 10px;
+        margin: 0;
+        text-transform: lowercase;
+        text-align: center;
+    }
+
+/* Página contato */
+
+.banner-contato {
+    width: 100%;
+    height: 400px;
+    background-image: url(../img-omma/banner-contato.png);
+    background-size: cover;
+    background-position: center;
+}
+.banner-contato .container,
+section.contato .container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+}
+.banner-contato .container h1 {
+    color: #fff;
+    font-size: 70px;
+}
+.banner-vertical {
+    width: 30%;
+    height: 700px;
+    background-image: url(../img-omma/banner-vertical.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+}
+.formulario {
+    border: 1px solid #FFA000;
+    border-radius: 20px;
+    margin: 0 30px;
+    padding: 30px;
+    width: 70%;
+}
+.formulario h2 {
+    color: #FFA000;
+}
+
+.formulario form input {
+    width: 100%;
+    border: 1px solid #FFA000;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.formulario form textarea {
+    width: 100%;
+    border: 1px solid #FFA000;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 5px 0;
+    height:200px;
+}
+
+.formulario form button {
+    font-size: 16px;
+    background-color:#FFA000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border: 1px solid #FFA000;
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+
+.formulario form button hover{
+    background-color: green;
+    border-color: green;
+    cursor: pointer;
 }
