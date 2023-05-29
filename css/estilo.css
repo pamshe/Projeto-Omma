@@ -34,7 +34,7 @@ color: #FDFDFD; /* mudar a cor do texto*/
 }
 
 main section.banner {
-    height: 400px; /*altura */
+    height: 500px; /*altura */
     background-color: cadetblue;
     background-image: url(../img-omma/banner.png); /* imagem de fundo */
     background-repeat: no-repeat; /* imagem não vai repetir */
@@ -49,9 +49,105 @@ main section.banner .container {
 } 
 
 main section.banner h1 {
-    font-size 70px;
+    font-size: 70px;
     text-transform: lowercase; /* tudo com letra minuscula*/
     color: #fff;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.36);/* sombra no texto */
     padding: 100px; 
+}
+
+main section.receitas-principais .container {
+min-height: 600px;
+width:1200px;
+margin: 0 auto; /* espaçamento automatico para centralizar o container */
+}
+
+main section.receitas-principais h2 {
+    color:#FFA000;
+    text-align: center;
+    font-weight: bold;
+    font-size: 55px;
+    text-transform: lowercase;
+}
+
+.lista-receitas {
+    display: flex; /*ativando flexbox */
+    justify-content: space-evenly; /* espaço entre os elementos na horizontal */
+align-items: flex-start; /*todos os elementos alinhado no topo */
+}
+
+.lista-receitas article {
+    
+    width:345px; /* largura do article */
+    text-align: center; /*centralizando tudo no article */
+}
+
+.lista-receitas  article .thumb {
+    width:100%; /*imagem vai ocupar 100% de largura no article */
+    height: 345px; /* altura da thumb */
+    background-color: orange; /* cor de fundo somente para teste */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.lista-receitas article h3 {
+    font-size: 26px;
+}
+
+.lista-receitas article a {
+    background-color: #176902;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 25px;
+    text-decoration: none; /* tirar sublinhado */
+}
+
+section.banner-secundario {
+    background-image: url(../img-omma/banner-secundario.png);
+    background-size: cover;
+    background-position: center;
+}
+
+section.banner-secundario .container {
+    min-height: 600px;
+    width:1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* itens em coluna */
+    justify-content: center; /* alinhamento centralizado na vertical */ 
+}
+
+section.banner-secundario .container h2 {
+    font-size: 62px;
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section.banner-secundario .container p {
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 450px;
+}
+
+footer {
+    background-color:#FFC107;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+footer .container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+}
+
+footer p {
+    padding: 0 15px;
 }
