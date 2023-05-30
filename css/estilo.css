@@ -47,7 +47,7 @@ main section.banner {
 
 main section.banner .container {
     display: flex;
-    justify-content: flex-end; /* alinhamento horizontal para a direita */
+    justify-content: flex-end;  /* alinhamento horizontal para a direita */
     align-items: center; /*alinhamento vertical para o centro */
     height: 600px; /* altura */
 } 
@@ -63,6 +63,7 @@ main section.banner h1 {
 main section.receitas-principais .container {
 min-height: 600px;
 width:1200px;
+max-width: 100%;
 margin: 0 auto; /* espaçamento automatico para centralizar o container */
 }
 
@@ -119,6 +120,7 @@ section.banner-secundario {
 section.banner-secundario .container {
     min-height: 600px;
     width:1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column; /* itens em coluna */
@@ -136,6 +138,7 @@ section.banner-secundario .container p {
     font-size: 24px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 450px;
+    max-width: 100%;
 }
 
 footer {
@@ -147,6 +150,7 @@ footer {
 
 footer .container {
     width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
@@ -164,6 +168,7 @@ footer p {
 main section.todas-receitas .container {
     min-height: 600px;
     width:1200px;
+    max-width: 100%;
     margin: 0 auto; /* espaçamento automatico para centralizar o container */
    padding: 50px 0; 
 }
@@ -179,6 +184,7 @@ main section.todas-receitas .container {
 
     .container-receita-interna{
         width: 1200px;
+        max-width: 100%;
         margin: 50px auto;
         display: flex;
         justify-content: space-between;
@@ -187,10 +193,12 @@ main section.todas-receitas .container {
 
     .container-receita-interna main {
         width: 700px;
+        max-width: 100%;
     }
 
     .container-receita-interna main img{
-        width: 100%
+        width: 100%;
+        max-width: 100%;
     }
 
     small.tag {
@@ -234,6 +242,7 @@ main section.todas-receitas .container {
 .banner-contato .container,
 section.contato .container {
     width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 50px 0;
     display: flex;
@@ -293,4 +302,122 @@ section.contato .container {
     background-color: green;
     border-color: green;
     cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+/* se o dispositivo tiver no maximo 1100px*/
+ 
+.container {
+    width: 800px !important;
+    max-width: 1005 !important;
+
+     /* !important sobrescreve outras regras */
+}
+
+main.section.banner .container{
+    justify-content: flex-start;
+}
+    
+.lista-receitas article {
+
+    width:250px;
+}
+
+.container-receita-interna main {
+    width: 500px;
+}
+
+.container-receita-interna main iframe{
+    width: 100%;
+}
+
+}
+
+@media (max-width:900px) {
+    .container,
+    .container-receita-interna {
+        width: 800px !important;
+        padding: 0 20px;
+    }
+
+    .lista-receitas article {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width:768px) {
+
+    .logo img {
+        max-width:150px;
+    }
+
+    section.banner .container h1 {
+    font-size:30px;
+    position: relative;
+    display: flex;
+    top:-150px;
+    left: -50px;
+
+    
+    }
+
+     main section.banner {
+        
+        background-size: 700px;
+        background-color:#FDFDFD;
+        background-repeat:no-repeat;
+        height: 300px;
+     }
+
+     section.receitas-principais .container h2 {
+        font-size:35px;
+     }
+
+     
+     main section.banner h1 {
+        font-size: 70px;
+        text-transform: lowercase; /* tudo com letra minuscula*/
+        color: #fbf9f9;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.36);/* sombra no texto */
+         padding:600px;
+     }
+
+     .lista-receitas {
+        display: flex; /*ativando flexbox */
+        justify-content: center; /* espaço entre os elementos na horizontal */
+        align-items: flex-start; /*todos os elementos alinhado no topo */
+        flex-wrap: wrap;
+    }
+    
+    .lista-receitas article {
+        
+        width:245px; /* largura do article */
+        text-align: center; /*centralizando tudo no article */
+    margin-bottom: 60px;
+    }
+    
+    .lista-receitas  article .thumb {
+        width:100%; /*imagem vai ocupar 100% de largura no article */
+        height: 245px; /* altura da thumb */
+        background-color: orange; /* cor de fundo somente para teste */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    section.banner-secundario .container p {
+        font-size: 20px;
+    }
+    
+    section.banner-secundario .container h2{
+        font-size: 35px;
+    }
+    
+    section.banner-secundario {
+        height:500px;
+    }
+
+
+
 }
